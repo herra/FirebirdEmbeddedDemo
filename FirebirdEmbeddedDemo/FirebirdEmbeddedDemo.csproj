@@ -28,6 +28,48 @@
     <None Update="Database\DEMO.FDB">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0.amd64\intl\fbintl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0.amd64\intl\fbintl.conf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0.amd64\libfbclient.so.2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0.amd64\libfbclient.so.3.0.4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0.amd64\plugins\libEngine12.so">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0.amd64\plugins\libfbtrace.so">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0.amd64\plugins\libSrp.so">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0.amd64\plugins\libudr_engine.so">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0.amd64\plugins\udr_engine.conf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0.amd64\UDF\fbudf.so">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0.amd64\UDF\fbudf.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0.amd64\UDF\ib_udf.so">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0.amd64\UDF\ib_udf.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0.amd64\UDF\ib_udf2.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Firebird\Firebird-3.0.4.33054-0_Win32\fbclient.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
