@@ -1,4 +1,5 @@
 ﻿using FirebirdEmbeddedDemo.Data;
+using FirebirdSql.Data.FirebirdClient;
 using System;
 using System.IO;
 using System.Reflection;
@@ -58,7 +59,7 @@ namespace FirebirdEmbeddedDemo
                 if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
                     archPath = "Firebird-3.0.4.33054-0_x64";
                 else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
-                    archPath = "Firebird-debuginfo-3.0.4.33054-0.amd64";
+                    archPath = "Firebird-3.0.4.33054-0.amd64";
                 else
                     throw new NotSupportedException("Unsupported platform");
             }
@@ -78,7 +79,7 @@ namespace FirebirdEmbeddedDemo
 
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
             {
-                dllPath = Path.Combine(directory, "Firebird", archPath, "libfbembed.so");
+                dllPath = Path.Combine(directory, "Firebird", archPath, "libfbclient.so");
             }
             else if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
             {
