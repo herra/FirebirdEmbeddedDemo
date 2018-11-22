@@ -1,0 +1,315 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Firebird\Firebird-debuginfo-3.0.4.33054-0.amd64\**" />
+    <Compile Remove="Firebird\Firebird-debuginfo-3.0.4.33054-0.i686\**" />
+    <Compile Remove="Firebird\Firebird-withDebugInfo-3.0.4.33054-0.arm\**" />
+    <EmbeddedResource Remove="Firebird\Firebird-debuginfo-3.0.4.33054-0.amd64\**" />
+    <EmbeddedResource Remove="Firebird\Firebird-debuginfo-3.0.4.33054-0.i686\**" />
+    <EmbeddedResource Remove="Firebird\Firebird-withDebugInfo-3.0.4.33054-0.arm\**" />
+    <None Remove="Firebird\Firebird-debuginfo-3.0.4.33054-0.amd64\**" />
+    <None Remove="Firebird\Firebird-debuginfo-3.0.4.33054-0.i686\**" />
+    <None Remove="Firebird\Firebird-withDebugInfo-3.0.4.33054-0.arm\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Database\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FirebirdSql.Data.FirebirdClient" Version="6.4.0" />
+    <PackageReference Include="FirebirdSql.EntityFrameworkCore.Firebird" Version="6.4.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FirebirdEmbeddedDemo.Data\FirebirdEmbeddedDemo.Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Database\DEMO.FDB">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_Win32\fbclient.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_Win32\firebird.conf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_Win32\ib_util.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_Win32\icudt52.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_Win32\icudt52l.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_Win32\icuin52.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_Win32\icuuc52.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_Win32\intl\fbintl.conf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_Win32\intl\fbintl.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_Win32\plugins\engine12.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_Win32\plugins\fbtrace.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_Win32\plugins\legacy_auth.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_Win32\plugins\legacy_usermanager.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_Win32\plugins\srp.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_Win32\plugins\udr_engine.conf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_Win32\plugins\udr_engine.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_Win32\udf\fbudf.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_Win32\udf\fbudf.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_Win32\udf\fbudf.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_Win32\udf\ib_udf.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_Win32\udf\ib_udf.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_Win32\udf\ib_udf2.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_Win32_pdb\fbclient.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_Win32_pdb\fbclient.pdb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_Win32_pdb\firebird.conf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_Win32_pdb\ib_util.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_Win32_pdb\icudt52.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_Win32_pdb\icudt52l.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_Win32_pdb\icuin52.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_Win32_pdb\icuuc52.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_Win32_pdb\intl\fbintl.conf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_Win32_pdb\intl\fbintl.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_Win32_pdb\plugins\engine12.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_Win32_pdb\plugins\fbtrace.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_Win32_pdb\plugins\legacy_auth.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_Win32_pdb\plugins\legacy_usermanager.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_Win32_pdb\plugins\srp.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_Win32_pdb\plugins\udr_engine.conf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_Win32_pdb\plugins\udr_engine.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_Win32_pdb\udf\fbudf.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_Win32_pdb\udf\fbudf.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_Win32_pdb\udf\fbudf.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_Win32_pdb\udf\ib_udf.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_Win32_pdb\udf\ib_udf.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_Win32_pdb\udf\ib_udf2.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_x64\fbclient.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_x64\firebird.conf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_x64\ib_util.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_x64\icudt52.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_x64\icudt52l.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_x64\icuin52.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_x64\icuuc52.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_x64\intl\fbintl.conf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_x64\intl\fbintl.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_x64\plugins\engine12.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_x64\plugins\fbtrace.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_x64\plugins\legacy_auth.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_x64\plugins\legacy_usermanager.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_x64\plugins\srp.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_x64\plugins\udr_engine.conf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_x64\plugins\udr_engine.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_x64\udf\fbudf.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_x64\udf\fbudf.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_x64\udf\fbudf.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_x64\udf\ib_udf.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_x64\udf\ib_udf.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_x64\udf\ib_udf2.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_x64_pdb\fbclient.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_x64_pdb\fbclient.pdb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_x64_pdb\firebird.conf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_x64_pdb\ib_util.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_x64_pdb\icudt52.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_x64_pdb\icudt52l.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_x64_pdb\icuin52.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_x64_pdb\icuuc52.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_x64_pdb\intl\fbintl.conf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_x64_pdb\intl\fbintl.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_x64_pdb\plugins\engine12.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_x64_pdb\plugins\fbtrace.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_x64_pdb\plugins\legacy_auth.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_x64_pdb\plugins\legacy_usermanager.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_x64_pdb\plugins\srp.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_x64_pdb\plugins\udr_engine.conf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_x64_pdb\plugins\udr_engine.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_x64_pdb\udf\fbudf.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_x64_pdb\udf\fbudf.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_x64_pdb\udf\fbudf.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_x64_pdb\udf\ib_udf.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_x64_pdb\udf\ib_udf.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0_x64_pdb\udf\ib_udf2.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
