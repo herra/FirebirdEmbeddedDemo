@@ -217,6 +217,9 @@
     <None Update="Firebird\Firebird-3.0.4.33054-0.amd64\firebird.msg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="Firebird\Firebird-3.0.4.33054-0.amd64\security3.fdb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
